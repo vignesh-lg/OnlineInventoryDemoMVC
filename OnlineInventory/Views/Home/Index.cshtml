@@ -1,0 +1,39 @@
+﻿@model OnlineInventory.Entity.User
+@{
+    ViewBag.Title = "userDetails";
+}
+
+<h2>userDetails</h2>
+<table>
+    @foreach (OnlineInventory.Entity.User item in (IEnumerable<OnlineInventory.Entity.User>)ViewData["List"])
+    {
+        <tr>
+            <td>@item.UserName</td>
+        </tr>
+        <tr>
+            <td>@item.password</td>
+        </tr>
+    }
+</table>
+<table>
+    @foreach (OnlineInventory.Entity.User item in (IEnumerable<OnlineInventory.Entity.User>)TempData["List"])
+    {
+        <tr>
+            <td>@item.UserName</td>
+        </tr>
+        <tr>
+            <td>@item.password</td>
+        </tr>
+    }
+</table>
+<table>
+    @foreach (OnlineInventory.Entity.User item in ViewBag.List)
+    {
+        <tr>
+            <td>@item.UserName</td>
+        </tr>
+        <tr>
+            <td>@item.password</td>
+        </tr>
+    }
+</table>
